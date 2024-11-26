@@ -42,7 +42,7 @@ export default function Home() {
         secondaryButtonLink="/sobre"
         primaryButtonText="Começar agora"
         primaryButtonLink="/contato"
-        imageSrc="/assets/images/change.jpg"
+        imageSrc="/assets/images/gym.jpg"
         imageAlt="Pessoa treinando na academia"
       />
     </div>
