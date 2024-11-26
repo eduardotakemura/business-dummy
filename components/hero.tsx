@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { APP_THEME } from '@/lib/constants'
 
 export function Hero() {
   return (
@@ -9,7 +8,7 @@ export function Hero() {
           {/* Left Column - Text Content */}
           <div className="space-y-6">
             <h1
-              className={`text-4xl lg:text-5xl font-bold text-${APP_THEME.onBackground}`}
+              className={`text-4xl lg:text-5xl font-bold text-theme-onBackground`}
             >
               Transforme seu corpo,
               <br />
@@ -17,7 +16,7 @@ export function Hero() {
             </h1>
 
             <p
-              className={`text-lg text-${APP_THEME.onBackground} max-w-xl leading-relaxed`}
+              className={`text-lg text-theme-onBackground max-w-xl leading-relaxed`}
             >
               Na PowerFit, você encontra tudo o que precisa para alcançar seus
               objetivos fitness. Nossa academia oferece equipamentos de última
@@ -30,9 +29,9 @@ export function Hero() {
             <div className="flex flex-wrap gap-4">
               <button
                 className={`px-8 py-3 rounded-lg 
-                  border-2 border-${APP_THEME.background}
-                  text-${APP_THEME.onBackground} font-semibold 
-                  hover:bg-${APP_THEME.onBackgroundHover} hover:text-${APP_THEME.primary}
+                  border-2 border-theme-background
+                  text-theme-onBackground font-semibold 
+                  hover:bg-theme-onBackgroundHover hover:text-theme-primary
                   transition-colors duration-300`}
               >
                 Conhecer mais
@@ -40,8 +39,8 @@ export function Hero() {
 
               <button
                 className={`px-8 py-3 rounded-lg 
-                  bg-${APP_THEME.primary} hover:bg-${APP_THEME.primaryHover}
-                  text-${APP_THEME.background} font-semibold 
+                  bg-theme-primary hover:bg-theme-primaryHover
+                  text-theme-background font-semibold 
                   transition-colors duration-300`}
               >
                 Começar agora
