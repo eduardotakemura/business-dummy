@@ -1,39 +1,24 @@
-import { FaDumbbell, FaUsers, FaChartLine, FaClock } from 'react-icons/fa'
+interface FeaturesRowProps {
+  features: {
+    icon: React.ElementType
+    title: string
+    description: string
+  }[]
+}
 
-const features = [
-  {
-    icon: FaDumbbell,
-    title: 'Equipamentos Modernos',
-    description:
-      'Academia equipada com as melhores e mais modernas máquinas do mercado.',
-  },
-  {
-    icon: FaUsers,
-    title: 'Profissionais Qualificados',
-    description:
-      'Equipe de instrutores especializados para auxiliar no seu treino.',
-  },
-  {
-    icon: FaChartLine,
-    title: 'Acompanhamento',
-    description:
-      'Monitoramento constante da sua evolução e ajuste dos treinos.',
-  },
-  {
-    icon: FaClock,
-    title: 'Horário Flexível',
-    description:
-      'Academia aberta todos os dias com horários que se adaptam à sua rotina.',
-  },
-]
-
-export function FeaturesRow() {
+export function FeaturesRow({
+  mainTitle,
+  features,
+}: {
+  mainTitle: string
+  features: FeaturesRowProps['features']
+}) {
   return (
     <section className="w-full py-16">
       <h2
         className={`text-center text-4xl font-bold mb-12 text-theme-onBackground px-6`}
       >
-        Por que escolher a PowerFit?
+        {mainTitle}
       </h2>
 
       <div className={`w-full bg-theme-secondary`}>

@@ -27,12 +27,6 @@ export function Header() {
             Planos
           </Link>
           <Link
-            href="/categorias"
-            className={`text-theme-onSecondaryFade hover:text-theme-onSecondary transition-colors`}
-          >
-            Categorias
-          </Link>
-          <Link
             href="/contato"
             className={`px-4 py-2 rounded-lg bg-theme-primary text-theme-onSecondary hover:bg-theme-primaryHover transition-colors`}
           >

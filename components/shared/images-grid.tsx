@@ -1,45 +1,26 @@
 import Image from 'next/image'
 
-const images = [
-  {
-    src: '/assets/images/image1.jpg',
-    alt: 'Área de musculação',
-    title: 'Área de musculação',
-  },
-  {
-    src: '/assets/images/image1.jpg',
-    alt: 'Área cardio',
-    title: 'Área cardio',
-  },
-  {
-    src: '/assets/images/image1.jpg',
-    alt: 'Área funcional',
-    title: 'Área funcional',
-  },
-  {
-    src: '/assets/images/image1.jpg',
-    alt: 'Área de peso livre',
-    title: 'Área de peso livre',
-  },
-  {
-    src: '/assets/images/image1.jpg',
-    alt: 'Estúdio',
-    title: 'Estúdio',
-  },
-  {
-    src: '/assets/images/image1.jpg',
-    alt: 'Vestiário',
-    title: 'Vestiário',
-  },
-]
+interface ImagesGridProps {
+  images: {
+    src: string
+    alt: string
+    title: string
+  }[]
+}
 
-export function ImagesGrid() {
+export function ImagesGrid({
+  mainTitle,
+  images,
+}: {
+  mainTitle: string
+  images: ImagesGridProps['images']
+}) {
   return (
     <section className="w-full py-16">
       <h2
         className={`text-center text-4xl font-bold mb-12 text-theme-onBackground px-6`}
       >
-        Atividades para todos os gostos!
+        {mainTitle}
       </h2>
 
       <div className={`w-full bg-theme-secondary`}>

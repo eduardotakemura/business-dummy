@@ -1,51 +1,38 @@
+import Link from 'next/link'
 import { FaCheck } from 'react-icons/fa'
 
-const plans = [
-  {
-    name: 'Musculação',
-    description: 'Ideal para iniciantes',
-    price: '89,90',
-    features: [
-      'Acesso à área de musculação',
-      'Programa de treino personalizado',
-      'Avaliação física mensal',
-    ],
-  },
-  {
-    name: 'Musculação Plus',
-    description: 'O mais escolhido',
-    price: '129,90',
-    recommended: true,
-    features: [
-      'Todos os benefícios do plano Musculação',
-      'Acesso às aulas em grupo',
-      'Área funcional e cardio',
-      'Acompanhamento nutricional',
-    ],
-  },
-  {
-    name: 'Premium',
-    description: 'Para resultados máximos',
-    price: '199,90',
-    features: [
-      'Todos os benefícios do plano Plus',
-      'Personal trainer dedicado',
-      'Horários exclusivos',
-      'Acesso a todas as unidades',
-    ],
-  },
-]
+interface PricingProps {
+  name: string
+  description: string
+  price: string
+  recommended: boolean
+  features: string[]
+}
 
-export function Pricing() {
+export function Pricing({
+  mainTitle,
+  subTitle,
+  plans,
+  buttonText,
+  buttonLink,
+  recommendedTag,
+}: {
+  mainTitle: string
+  subTitle: string
+  plans: PricingProps[]
+  buttonText: string
+  buttonLink: string
+  recommendedTag: string
+}) {
   return (
     <section className="w-full py-16">
       <h2
         className={`text-center text-4xl font-bold text-theme-onBackground px-6`}
       >
-        Nossos Planos
+        {mainTitle}
       </h2>
       <p className={`text-center text-theme-onBackground mt-4 px-6`}>
-        Escolha o plano ideal para seus objetivos
+        {subTitle}
       </p>
 
       <div className="w-full">
@@ -63,7 +50,7 @@ export function Pricing() {
                       bg-theme-primary text-theme-background 
                       px-4 py-1 rounded-full text-sm font-semibold`}
                   >
-                    Plano Popular
+                    {recommendedTag}
                   </div>
                 )}
 
@@ -85,14 +72,15 @@ export function Pricing() {
                   </span>
                 </div>
 
-                <button
-                  className={`w-full py-3 px-6 rounded-lg 
+                <Link
+                  href={buttonLink}
+                  className={`w-full block text-center py-3 px-6 rounded-lg 
                     bg-theme-primary hover:bg-theme-primaryHover 
                     text-theme-background font-semibold 
                     transition-colors duration-300`}
                 >
-                  Começar agora
-                </button>
+                  {buttonText}
+                </Link>
 
                 <hr className={`my-6 border-theme-onSecondaryFade/20`} />
 

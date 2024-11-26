@@ -1,6 +1,11 @@
 import { FaInstagram, FaFacebook, FaYoutube } from 'react-icons/fa'
 import Link from 'next/link'
-import { APP_NAME } from '@/lib/constants'
+import {
+  APP_NAME,
+  INSTAGRAM_URL,
+  FACEBOOK_URL,
+  YOUTUBE_URL,
+} from '@/lib/constants'
 
 export function Footer() {
   return (
@@ -13,21 +18,21 @@ export function Footer() {
 
         <div className="flex items-center gap-4">
           <Link
-            href="https://instagram.com"
+            href={INSTAGRAM_URL}
             target="_blank"
             className={`text-theme-onSecondaryFade hover:text-theme-onSecondary transition-colors`}
           >
             <FaInstagram size={24} />
           </Link>
           <Link
-            href="https://facebook.com"
+            href={FACEBOOK_URL}
             target="_blank"
             className={`text-theme-onSecondaryFade hover:text-theme-onSecondary transition-colors`}
           >
             <FaFacebook size={24} />
           </Link>
           <Link
-            href="https://youtube.com"
+            href={YOUTUBE_URL}
             target="_blank"
             className={`text-theme-onSecondaryFade hover:text-theme-onSecondary transition-colors`}
           >
