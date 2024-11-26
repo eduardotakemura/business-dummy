@@ -64,7 +64,7 @@ export default function Features() {
       <div className="py-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="relative h-[400px]">
           <Image
-            src="/assets/images/gym-interior.jpg"
+            src="/assets/images/gym.jpg"
             alt="Interior da academia"
             fill
             className="object-cover rounded-2xl"
