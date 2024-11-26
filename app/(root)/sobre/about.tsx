@@ -23,7 +23,7 @@ export default function About() {
       {/* Main Image */}
       <div className="relative h-[500px] w-full mb-20">
         <Image
-          src="/assets/images/image1.jpg"
+          src="/assets/images/peso_livre.jpg"
           alt="Nossa academia"
           fill
           className="object-cover rounded-2xl"
@@ -64,8 +64,8 @@ export default function About() {
             <div key={index} className="text-center">
               <div className="relative w-48 h-48 mx-auto mb-4">
                 <Image
-                  src={`/assets/images/team-${item}.jpg`}
-                  alt={`Team member ${item}`}
+                  src={`/assets/images/team-${index + 1}.jpg`}
+                  alt={`Team member ${index + 1}`}
                   fill
                   className="object-cover rounded-full"
                 />

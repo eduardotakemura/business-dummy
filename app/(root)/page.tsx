@@ -12,7 +12,7 @@ import { plans } from '@/lib/data/pricing'
 export default function Home() {
   return (
     <div>
-      <VideoHeader title={`Conheça a ${APP_NAME}!`} videoId="HRK6xWyhvPg" />
+      <VideoHeader title={`Conheça a ${APP_NAME}!`} videoId="3YTohytF9oE" />
       <FeaturesRow
         mainTitle={`Por que escolher a ${APP_NAME}?`}
         features={features}
@@ -42,7 +42,7 @@ export default function Home() {
         secondaryButtonLink="/sobre"
         primaryButtonText="Começar agora"
         primaryButtonLink="/contato"
-        imageSrc="/assets/images/image1.jpg"
+        imageSrc="/assets/images/change.jpg"
         imageAlt="Pessoa treinando na academia"
       />
     </div>
